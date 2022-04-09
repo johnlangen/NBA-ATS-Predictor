@@ -24,6 +24,7 @@ Regression based analysis algorithm resulting in a spread prediction for each ni
         * The Grizzlies statistically should be favored by 1 more point
         * Vegas is decreasing the spread from that, which means there is some external reason affecting the team
         * Then you should take the Celtics, as the Grizzlies expected to play worse than they statistically are
+        * ** Note ** This also makes sense in terms of the agenda of Vegas, in which they expect more people to bet on the Grizzlies since they should be         favored by more
 
 
 
