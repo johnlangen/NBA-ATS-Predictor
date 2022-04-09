@@ -3,22 +3,22 @@ Regression based analysis algorithm resulting in a spread prediction for each ni
 
 # Algorithm
   1) Create Regressions
-     a) Regressions include all statistics from the SpreadPred2.csv
-     b) These include: PTS, FGM, 3PA, 3P%, FTM, FTA, FT%, OR, DR, REB, AST, STL, BLK, TO, PF
-     c) These statistics are then used in a linear regression against the teams ranking, to determine the importance of each statistic
+     * Regressions include all statistics from the SpreadPred2.csv
+     * These include: PTS, FGM, 3PA, 3P%, FTM, FTA, FT%, OR, DR, REB, AST, STL, BLK, TO, PF
+     * These statistics are then used in a linear regression against the teams ranking, to determine the importance of each statistic
      
   2) Regression Analysis / Main Algorithm
-     a) From the regressions, we get a weighted sum for each team to be used in calculations
-     b) All the matchups are then webscraped from Oddsshark.com, and their weighted sums are computed
-     b) sum2 represents the weighted sum of the higher sum, sum1 represents the weighted sum of the lesser (sum2 > sum1)
-     c) The final calculation is represented by: ((sum2+bias)-sum1)/18.8888 = FINALCALC (where 18.8888 is the constant, and here we use FINALCALC for that #)
+     * From the regressions, we get a weighted sum for each team to be used in calculations
+     * All the matchups are then webscraped from Oddsshark.com, and their weighted sums are computed
+     * sum2 represents the weighted sum of the higher sum, sum1 represents the weighted sum of the lesser (sum2 > sum1)
+     * The final calculation is represented by: ((sum2+bias)-sum1)/18.8888 = FINALCALC (where 18.8888 is the constant, and here we use FINALCALC for that #)
      
   3) Final Analysis / Decision
-     a) This is then compared against Vegas' spread for that matchup, which is also webscraped from Oddsshark
-     b) Final analysis is done, which follows these rules
+     * This is then compared against Vegas' spread for that matchup, which is also webscraped from Oddsshark
+     * Final analysis is done, which follows these rules
       * Assume the Grizzlies are playing the Celtics, where the Celtics are +2.5 by Vegas
-      i) IF --> FINALCALC > Vegas' Spread (Ex. Grizzlies -3.5 > Grizzlies -2.5)
-      ii) THEN --> Result = Celtics +2.5
+      ** IF --> FINALCALC > Vegas' Spread (Ex. Grizzlies -3.5 > Grizzlies -2.5)
+      ** THEN --> Result = Celtics +2.5
       
       REASONING : The logic here is contradictive
         * The Grizzlies statistically should be favored by 1 more point
