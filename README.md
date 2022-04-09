@@ -26,9 +26,10 @@ Regression based analysis algorithm resulting in a spread prediction for each ni
         * Then you should take the Celtics, as the Grizzlies expected to play worse than they statistically are
         * ** Note ** This also makes sense in terms of the agenda of Vegas, in which they expect more people to bet on the Grizzlies since they should be         favored by more
 
-
-
         * * Using this logic, the program has thus far performed @ 62.87% over 237 games (Correct:149, Incorrect:88)
+
+
+  4) Finally, the program makes use of the Twitter API, as well as importing schedule and time, to tweet every 24 hours to @locks_szn
       
 
 
